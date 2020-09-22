@@ -2,10 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using MyFileSystem.Services.Interfaces.File;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace MyFileSystem.Services.File
 {
@@ -17,19 +14,16 @@ namespace MyFileSystem.Services.File
         {
             _webHostEnvironment = webHostEnvironment;
         }
-
         public void CreateDirectory(string path)
         {
             if (!Directory.Exists(path)) throw new Exception("Directory Already Exits... ");
             Directory.CreateDirectory(path);
         }
-
         public void DeleteDirectory(string path)
         {
             if (!Directory.Exists(path)) throw new Exception("Directory Doesn't Exits... ");
             Directory.Delete(path, true);
         }
-
         public async void UploadFile(IFormFile file, string path)
         {
             var stream = System.IO.File.Create(path);
@@ -40,7 +34,6 @@ namespace MyFileSystem.Services.File
         {
             System.IO.File.Delete(path);
         }
-
         public string GetRootPath()
         {
             return _webHostEnvironment.WebRootPath + "\\";

@@ -1,20 +1,15 @@
-﻿using System;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using MyFileSystem.Core.DTOs;
+using MyFileSystem.Persistence.UnitOfWork;
+using MyFileSystem.Services.Interfaces.File;
+using MyFileSystem.Validators;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using AutoMapper;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using MyFileSystem.Core.DTOs;
-using MyFileSystem.Entities;
-using MyFileSystem.Persistence;
-using MyFileSystem.Persistence.Repositories;
-using MyFileSystem.Persistence.UnitOfWork;
-using MyFileSystem.Services.Interfaces.File;
-using MyFileSystem.Validators;
 
 namespace MyFileSystem.Services.File
 {
@@ -33,56 +28,45 @@ namespace MyFileSystem.Services.File
 
         public async Task<List<FileDto>> GetFiles()
         {
-            //var files = await _context.Files.ToListAsync();
             var files = await _unitOfWork.FileRepository.GetAll();
             if (files == null)
                 throw new Exception("Not Found... ");
-            return _mapper.Map<List<Entities.File>, List<FileDto>>((List<Entities.File>)files); // ?? //
+            return _mapper.Map<List<Entities.File>, List<FileDto>>((List<Entities.File>)files);
         }
         public async Task<FileDto> GetFiles(int id)
         {
-            //var file = await _context.Files.FindAsync(id);
             var file = await _unitOfWork.FileRepository.GetById(id);
             if (file == null)
                 throw new Exception("Not Found... ");
-            //var stream = System.IO.File.OpenRead(Path.GetFullPath(Path.GetFullPath(file.FilePath)));
-            //var reader = new StreamReader(stream);
             return _mapper.Map<Entities.File, FileDto>(file);
         }
-        public async Task<FileDto> UploadFile( IFormFile file, int folderId)
+        public async Task<FileDto> UploadFile([FromForm] CreateFileDto createFileDto)
         {
-            FileValidator fileValidator = new FileValidator();
-            if (!fileValidator.Validate(file).IsValid) throw new Exception("Empty_Null");
+            CreateFileValidator createfileValidator = new CreateFileValidator();
+            if (!createfileValidator.Validate(createFileDto.PhFile).IsValid) throw new Exception("Name Not Valid... ");
 
             //--------------- Upload Physical File ------------------//
             var path = "";
-            if (file == null)
-                throw new Exception("File not selected");
-            if (folderId > 0)
+            if (createFileDto.FolderId > 0)
             {
-                var rootFolder = (await _unitOfWork.FoldersRepository.GetAllIncluded(f => f.FolderId == folderId)).SingleOrDefault();//_context.Folders.Where(f => f.FolderId == folderId).SingleOrDefaultAsync();
+                var rootFolder = (await _unitOfWork.FoldersRepository.GetAllIncluded(f => f.FolderId == createFileDto.FolderId)).SingleOrDefault();
                 if (rootFolder == null) { throw new Exception("Folder not found"); }
-                path = rootFolder.FolderPath + '\\' + file.FileName; 
+                path = rootFolder.FolderPath + '\\' + createFileDto.PhFile.FileName;
             }
             else
             {
-                path = _fileManager.GetRootPath() + file.FileName;
+                path = _fileManager.GetRootPath() + createFileDto.PhFile.FileName;
             }
-            _fileManager.UploadFile(file, path);
-            //await using (var stream = System.IO.File.Create(path))
-            //{
-            //    await file.CopyToAsync(stream);
-            //    stream.Flush();
-            //}
+            _fileManager.UploadFile(createFileDto.PhFile, path);
 
-            //----------------------- Save to Db ---------------------//
+            //----------------------- Save to Db --------------------//
             var entityFile = new Entities.File
             {
                 FileName = Path.GetFileNameWithoutExtension(path),
-                FileExtension = Path.GetExtension(file.FileName),
-                FileSize = int.Parse(file.Length.ToString()),
+                FileExtension = Path.GetExtension(createFileDto.PhFile.FileName),
+                FileSize = int.Parse(createFileDto.PhFile.Length.ToString()),
                 FilePath = Path.GetFullPath(path),
-                FolderId = folderId > 0 ? folderId : default(int?)
+                FolderId = createFileDto.FolderId > 0 ? createFileDto.FolderId : default(int?)
             };
 
             var f = new FileInfo(Path.GetFullPath(path));
@@ -90,15 +74,15 @@ namespace MyFileSystem.Services.File
             await _unitOfWork.CompleteAsync();
             return _mapper.Map<Entities.File, FileDto>(entityFile);
         }
-        public async Task<string> UpdateFiles(int id, [FromBody] CreateFileDto createFileDto)
+        public async Task<string> UpdateFiles(int id, [FromBody] UpdateFileDto updateFileDto)
         {
             var file = await _unitOfWork.FileRepository.GetById(id);
             if (file == null)
                 throw new Exception("Not Found... ");
             
-            file = _mapper.Map(createFileDto, file);
+            file = _mapper.Map(updateFileDto, file);
             await _unitOfWork.CompleteAsync();
-            _mapper.Map<Entities.File, CreateFileDto>(file);
+            _mapper.Map<Entities.File, UpdateFileDto>(file);
             return ("File was updated... ");
         }
         public async Task<string> DeleteFiles(int id)
@@ -109,8 +93,6 @@ namespace MyFileSystem.Services.File
 
             var path = file.FilePath;
             
-            //Path.GetFullPath(file.FilePath);
-
             _fileManager.DeleteFile(path);
             
             _unitOfWork.FileRepository.Delete(file);

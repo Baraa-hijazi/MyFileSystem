@@ -8,9 +8,6 @@ namespace MyFileSystem.Persistence.UnitOfWork
     {
         IBaseRepository<File> FileRepository { get; }
         IBaseRepository<Folder> FoldersRepository { get; }
-
-        //IFoldersRepository FoldersRepository  { get; }
-
         Task CompleteAsync();
     }
 }

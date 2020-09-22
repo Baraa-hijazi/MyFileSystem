@@ -13,6 +13,7 @@ namespace MyFileSystem.Mapping
             CreateMap<Folder, FoldersDto>().ReverseMap();
             CreateMap<Folder, FolderDto>().ReverseMap()
                 .ForMember(f => f.FolderId, opt => opt.Ignore());
+
             CreateMap<Folder, List<FolderDto>>().ReverseMap()
                 .ForMember(f => f.FolderId, opt => opt.Ignore());
 
@@ -22,9 +23,8 @@ namespace MyFileSystem.Mapping
             CreateMap<Folder, CreateFolderDto>().ReverseMap()
                 .ForMember(f => f.FolderId, opt => opt.Ignore());
         
-            CreateMap<File, CreateFileDto>().ReverseMap()
+            CreateMap<File, UpdateFileDto>().ReverseMap()
                 .ForMember(f => f.FileId, opt => opt.Ignore());
-            
         }
     }
 }

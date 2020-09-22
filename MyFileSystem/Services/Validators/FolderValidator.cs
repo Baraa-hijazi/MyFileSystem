@@ -9,9 +9,9 @@ using MyFileSystem.Entities;
 
 namespace MyFileSystem.Validators
 {
-    public class FolderValidator:AbstractValidator<CreateFolderDto>
+    public class CreateFolderValidator : AbstractValidator<CreateFolderDto>
     {
-        public FolderValidator()
+        public CreateFolderValidator()
         {
             RuleFor(f => f.FolderName).NotEmpty().MinimumLength(1).MaximumLength(20).WithMessage("Folder Name Must be filled. ");
         }

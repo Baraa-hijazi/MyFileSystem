@@ -1,9 +1,6 @@
 ﻿using AutoMapper;
 using MyFileSystem.Entities;
 using MyFileSystem.Persistence.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace MyFileSystem.Persistence.UnitOfWork
@@ -13,12 +10,10 @@ namespace MyFileSystem.Persistence.UnitOfWork
         public  readonly FileSystemDbContext _context;
         public IBaseRepository<File> FileRepository { get; }
         public IBaseRepository<Folder> FoldersRepository { get; }
-
-        //public IFoldersRepository FoldersRepository { get; }
         public UnitOfWork(FileSystemDbContext context, IMapper mapper)
         {
             FileRepository = new BaseRepository<File>(context);
-            FoldersRepository = new BaseRepository<Folder>(context); //new FoldersRepository(context,mapper);
+            FoldersRepository = new BaseRepository<Folder>(context);
             _context = context;
         }
 

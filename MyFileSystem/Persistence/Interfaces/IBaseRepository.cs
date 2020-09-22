@@ -14,7 +14,6 @@ namespace MyFileSystem.Persistence.Repositories
         void Add(T obj);
         void Update(T obj);
         T Delete(T id);
-
         Task DeleteRange(List<T> entites);
     }
 }

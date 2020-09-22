@@ -2,13 +2,9 @@
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
 using MyFileSystem.Entities;
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace MyFileSystem.Persistence 
+namespace MyFileSystem.Persistence
 {
     public class FileSystemDbContext : DbContext
     {
@@ -18,7 +14,9 @@ namespace MyFileSystem.Persistence
         protected override void OnModelCreating(ModelBuilder modelBuilder) { }
 
         public FileSystemDbContext(DbContextOptions<FileSystemDbContext> Options) : base(Options)
-        { var config = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json").Build(); }
+        { 
+            var config = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json").Build(); 
+        }
 
         public FileSystemDbContext() { }
 
