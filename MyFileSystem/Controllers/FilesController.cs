@@ -7,9 +7,9 @@ using IActionResult = Microsoft.AspNetCore.Mvc.IActionResult;
 
 namespace MyFileSystem.Controllers
 {
-    [Route("api/files")]
+    [Route("api/[Controller]")]
     [ApiController]
-    public class FilesController : ControllerBase
+    public class FilesController : BaseController
     {
         private readonly IFileService _fileService;
 

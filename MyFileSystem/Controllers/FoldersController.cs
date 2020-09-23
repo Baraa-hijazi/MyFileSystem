@@ -1,13 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using MyFileSystem.Core.DTOs;
 using MyFileSystem.Services.Interfaces.Folder;
 using System.Threading.Tasks;
 
 namespace MyFileSystem.Controllers
 {
-    [Route("api/folders")]
+    [Route("api/[Controller]")]
     [ApiController]
-    public class FoldersController : ControllerBase
+    public class FoldersController : BaseController
     {
         private readonly IFolderService _folderService;
 
@@ -17,10 +18,12 @@ namespace MyFileSystem.Controllers
         }
 
         [HttpPost]
+        
         public async Task<IActionResult> CreateFolders([FromBody] CreateFolderDto cFolderDto) => Ok(await _folderService.CreateFolders(cFolderDto));
         [HttpGet("{id}")]
         public async Task<IActionResult> GetFolders(int id) => Ok(await _folderService.GetFolder(id));
         [HttpGet]
+        [Authorize]
         public async Task<IActionResult> GetFolders() => Ok(await _folderService.GetFolders());
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateFolders(int id, [FromForm] string path2) => Ok(await _folderService.UpdateFolders(id, path2));
