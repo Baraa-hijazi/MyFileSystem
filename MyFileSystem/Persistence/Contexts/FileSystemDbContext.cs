@@ -10,21 +10,18 @@ using System;
 
 namespace MyFileSystem.Persistence
 {
-    public class FileSystemDbContext : IdentityDbContext<ApplicationUser> //DbContext
+    public class FileSystemDbContext : IdentityDbContext<ApplicationUser>
     {
         public DbSet<Folder> Folders { get; set; }
         public DbSet<Entities.File> Files { get; set; }
         public DbSet<ApplicationUser> ApplicationUser { get; set; }
-
-
-        public FileSystemDbContext() { }
+        public FileSystemDbContext() { } 
 
         //protected override void OnModelCreating(ModelBuilder modelBuilder) { }
 
         public FileSystemDbContext(DbContextOptions<FileSystemDbContext> Options) : base(Options)
         { 
             var config = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json").Build(); 
-            
         }
 
         public class Fix : IDesignTimeDbContextFactory<FileSystemDbContext>
@@ -64,7 +61,6 @@ namespace MyFileSystem.Persistence
                 PhoneNumberConfirmed = true,
                 PasswordHash = hash.HashPassword(null, "P@ssw0rd"),
                 SecurityStamp = String.Empty,
-            
             });
 
             builder.Entity<IdentityUserRole<string>>().HasData(new IdentityUserRole<string>

@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using MyFileSystem.Core.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,10 +13,10 @@ namespace MyFileSystem.Persistence.Repositories
         private readonly FileSystemDbContext _context = null;
         private readonly DbSet<T> table = null;
      
-        public BaseRepository(FileSystemDbContext _context) 
+        public BaseRepository(FileSystemDbContext context) 
         {
-            this._context = _context;
-            table = _context.Set<T>();
+            _context = context;
+            table = context.Set<T>();
         }
 
         public async Task<IEnumerable<T>> GetAll(Expression<Func<T, bool>> predicate = null, string Includes = null)
@@ -43,6 +44,24 @@ namespace MyFileSystem.Persistence.Repositories
             return await query.ToListAsync();
         }
 
+        public async Task<PagedResultDto<T>> GetAllIncludedPagnation(Expression<Func<T, bool>> predicate = null, int? pageIndex = 1, int? pageSize = 10, params Expression<Func<T, object>>[] Includes)
+        {
+            if (pageIndex <= 0) pageIndex = 1;
+            if (pageSize <= 0) pageSize = 10;
+
+            var query = table.Where(predicate);
+            foreach (var Include in Includes)
+            {
+                query = query.Include(Include);
+            }
+
+            return new PagedResultDto<T>
+            {
+                TotalCount = await query.CountAsync(),
+                Result = await query.Skip((int)((pageIndex - 1) * pageSize)).Take((int)pageSize).ToListAsync()
+            };
+        }
+
         public async Task<T> GetById(object id)
         { 
             return await table.FindAsync(id);
@@ -64,7 +83,7 @@ namespace MyFileSystem.Persistence.Repositories
             table.Remove(existing);
             return existing;
         }
-
+        
         public Task DeleteRange(List<T> entites)
         {
             table.RemoveRange(entites);

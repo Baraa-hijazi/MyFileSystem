@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MyFileSystem.Core.DTOs;
 using MyFileSystem.Persistence.UnitOfWork;
@@ -26,20 +25,28 @@ namespace MyFileSystem.Services.File
             _mapper = mapper;
         }
 
-        public async Task<List<FileDto>> GetFiles()
+        //public async Task<List<FileDto>> GetFiles()
+        //{
+        //    var files = await _unitOfWork.FileRepository.GetAll();
+        //    if (files == null)
+        //        throw new Exception("Not Found... ");
+        //    return _mapper.Map<List<Entities.File>, List<FileDto>>((List<Entities.File>)files);
+        //}
+
+        public async Task<PagedResultDto<FileDto>> GetFiles(int? pageIndex, int? pageSize)
         {
-            var files = await _unitOfWork.FileRepository.GetAll();
-            if (files == null)
-                throw new Exception("Not Found... ");
-            return _mapper.Map<List<Entities.File>, List<FileDto>>((List<Entities.File>)files);
+            var files = await _unitOfWork.FileRepository.GetAllIncludedPagnation(f => f.FileName != null, pageIndex, pageSize);
+            return _mapper.Map<PagedResultDto<Entities.File>, PagedResultDto<FileDto>>(files);
         }
-        public async Task<FileDto> GetFiles(int id)
+
+        public async Task<FileDto> GetFile(int id)
         {
             var file = await _unitOfWork.FileRepository.GetById(id);
             if (file == null)
                 throw new Exception("Not Found... ");
             return _mapper.Map<Entities.File, FileDto>(file);
         }
+
         public async Task<FileDto> UploadFile([FromForm] CreateFileDto createFileDto)
         {
             CreateFileValidator createfileValidator = new CreateFileValidator();
@@ -74,6 +81,7 @@ namespace MyFileSystem.Services.File
             await _unitOfWork.CompleteAsync();
             return _mapper.Map<Entities.File, FileDto>(entityFile);
         }
+
         public async Task<string> UpdateFiles(int id, [FromBody] UpdateFileDto updateFileDto)
         {
             var file = await _unitOfWork.FileRepository.GetById(id);
@@ -85,6 +93,7 @@ namespace MyFileSystem.Services.File
             _mapper.Map<Entities.File, UpdateFileDto>(file);
             return ("File was updated... ");
         }
+
         public async Task<string> DeleteFiles(int id)
         {
             var file = await _unitOfWork.FileRepository.GetById(id);
