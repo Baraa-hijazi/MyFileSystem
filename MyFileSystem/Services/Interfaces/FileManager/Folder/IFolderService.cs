@@ -7,10 +7,11 @@ namespace MyFileSystem.Services.Interfaces.Folder
 {
     public interface IFolderService
     {
-        Task<FolderDto> CreateFolders(CreateFolderDto cFolderDto);
+        Task<CreateFolderDto> CreateFolders(CreateFolderDto cFolderDto);
         Task<FolderDto> GetFolder(int id); 
-        Task<List<FolderParentDto>> GetFolders();
+    //    Task<List<FolderParentDto>> GetFolders();
         Task<string> DeleteFolders(int id);
         Task<string> UpdateFolders(int id, [FromForm] string path2);
+        Task<PagedResultDto<FolderDto>> GetPagedFolders(int? pageIndex, int? pageSize);
     }
 }

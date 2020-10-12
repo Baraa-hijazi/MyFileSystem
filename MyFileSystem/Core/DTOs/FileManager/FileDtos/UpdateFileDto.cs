@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-
-namespace MyFileSystem.Core.DTOs 
+﻿namespace MyFileSystem.Core.DTOs
 {
     public class UpdateFileDto
     {

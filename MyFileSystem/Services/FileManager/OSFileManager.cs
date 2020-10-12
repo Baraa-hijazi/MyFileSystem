@@ -16,7 +16,7 @@ namespace MyFileSystem.Services.File
         }
         public void CreateDirectory(string path)
         {
-            if (!Directory.Exists(path)) throw new Exception("Directory Already Exits... ");
+            if (Directory.Exists(path)) throw new Exception("Directory Already Exits... ");
             Directory.CreateDirectory(path);
         }
         public void DeleteDirectory(string path)

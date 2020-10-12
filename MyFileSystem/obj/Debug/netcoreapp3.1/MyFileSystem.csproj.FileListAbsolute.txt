@@ -86,6 +86,11 @@ C:\Users\Lenovo L\source\repos\MyFileSystem\MyFileSystem\bin\Debug\netcoreapp3.1
 C:\Users\Lenovo L\source\repos\MyFileSystem\MyFileSystem\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
 C:\Users\Lenovo L\source\repos\MyFileSystem\MyFileSystem\bin\Debug\netcoreapp3.1\Scrutor.dll
 C:\Users\Lenovo L\source\repos\MyFileSystem\MyFileSystem\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Lenovo L\source\repos\MyFileSystem\MyFileSystem\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\Lenovo L\source\repos\MyFileSystem\MyFileSystem\obj\Debug\netcoreapp3.1\MyFileSystem.csproj.CoreCompileInputs.cache
 C:\Users\Lenovo L\source\repos\MyFileSystem\MyFileSystem\obj\Debug\netcoreapp3.1\MyFileSystem.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Lenovo L\source\repos\MyFileSystem\MyFileSystem\obj\Debug\netcoreapp3.1\MyFileSystem.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Lenovo L\source\repos\MyFileSystem\MyFileSystem\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Lenovo L\source\repos\MyFileSystem\MyFileSystem\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Lenovo L\source\repos\MyFileSystem\MyFileSystem\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Lenovo L\source\repos\MyFileSystem\MyFileSystem\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
