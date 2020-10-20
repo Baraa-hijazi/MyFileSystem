@@ -12,11 +12,78 @@
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
     </expand>
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a262a75b-87df-450f-900f-176934a59418" name="Default Changelist" comment="API Gateway" />
+    <list default="true" id="a262a75b-87df-450f-900f-176934a59418" name="Default Changelist" comment="API Gateway">
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.MyFileSystem/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.MyFileSystem/.idea/contentModel.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.MyFileSystem/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.MyFileSystem/.idea/indexLayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.MyFileSystem/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.MyFileSystem/.idea/projectSettingsUpdater.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.MyFileSystem/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.MyFileSystem/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.MyFileSystem/riderModule.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ApiGatewayTest/Controllers/GatewayController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyFileSystem/obj/project.packagespec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyFileSystem/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JWTAuthentication/Controllers/WeatherForecastController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JWTAuthentication/JWTAuthentication.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JWTAuthentication/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JWTAuthentication/Properties/launchSettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JWTAuthentication/Startup.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JWTAuthentication/WeatherForecast.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JWTAuthentication/appsettings.Development.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JWTAuthentication/appsettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JWTAuthentication/obj/JWTAuthentication.csproj.nuget.dgspec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JWTAuthentication/obj/JWTAuthentication.csproj.nuget.g.props" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JWTAuthentication/obj/JWTAuthentication.csproj.nuget.g.targets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JWTAuthentication/obj/project.assets.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JWTAuthentication/obj/project.nuget.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFileSystem.sln" beforeDir="false" afterPath="$PROJECT_DIR$/MyFileSystem.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFileSystem/Controllers/AccountController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyFileSystem/Controllers/AccountController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFileSystem/Controllers/AdminstrationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyFileSystem/Controllers/AdminstrationController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFileSystem/Controllers/FilesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyFileSystem/Controllers/FilesController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFileSystem/Controllers/FoldersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyFileSystem/Controllers/FoldersController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFileSystem/Migrations/FileSystemDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyFileSystem/Migrations/FileSystemDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFileSystem/MyFileSystem.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MyFileSystem/MyFileSystem.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFileSystem/Persistence/Interfaces/IBaseRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyFileSystem/Persistence/Interfaces/IBaseRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFileSystem/Persistence/Interfaces/IUnitOfWork.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyFileSystem/Persistence/Interfaces/IUnitOfWork.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFileSystem/Persistence/Repositories/BaseRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyFileSystem/Persistence/Repositories/BaseRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFileSystem/Persistence/Repositories/Interfaces/IFoldersRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyFileSystem/Persistence/Repositories/Interfaces/IFoldersRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFileSystem/Persistence/UnitOfWork/UnitOfWork.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyFileSystem/Persistence/UnitOfWork/UnitOfWork.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFileSystem/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyFileSystem/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFileSystem/Services/Account/UserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyFileSystem/Services/Account/UserService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFileSystem/Services/FileManager/File/FileService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyFileSystem/Services/FileManager/File/FileService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFileSystem/Services/FileManager/Folder/FolderService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyFileSystem/Services/FileManager/Folder/FolderService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFileSystem/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyFileSystem/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFileSystem/bin/Debug/netcoreapp3.1/MyFileSystem.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MyFileSystem/bin/Debug/netcoreapp3.1/MyFileSystem.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFileSystem/bin/Debug/netcoreapp3.1/MyFileSystem.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MyFileSystem/bin/Debug/netcoreapp3.1/MyFileSystem.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFileSystem/bin/Debug/netcoreapp3.1/MyFileSystem.runtimeconfig.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyFileSystem/bin/Debug/netcoreapp3.1/MyFileSystem.runtimeconfig.dev.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFileSystem/bin/Debug/netcoreapp3.1/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyFileSystem/bin/Debug/netcoreapp3.1/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFileSystem/obj/Debug/netcoreapp3.1/MyFileSystem.MvcApplicationPartsAssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyFileSystem/obj/Debug/netcoreapp3.1/MyFileSystem.MvcApplicationPartsAssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFileSystem/obj/Debug/netcoreapp3.1/MyFileSystem.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MyFileSystem/obj/Debug/netcoreapp3.1/MyFileSystem.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFileSystem/obj/Debug/netcoreapp3.1/MyFileSystem.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MyFileSystem/obj/Debug/netcoreapp3.1/MyFileSystem.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFileSystem/obj/Debug/netcoreapp3.1/MyFileSystem.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MyFileSystem/obj/Debug/netcoreapp3.1/MyFileSystem.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFileSystem/obj/Debug/netcoreapp3.1/MyFileSystem.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MyFileSystem/obj/Debug/netcoreapp3.1/MyFileSystem.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFileSystem/obj/Debug/netcoreapp3.1/MyFileSystem.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MyFileSystem/obj/Debug/netcoreapp3.1/MyFileSystem.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFileSystem/obj/Debug/netcoreapp3.1/MyFileSystem.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MyFileSystem/obj/Debug/netcoreapp3.1/MyFileSystem.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFileSystem/obj/MyFileSystem.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyFileSystem/obj/MyFileSystem.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFileSystem/obj/MyFileSystem.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/MyFileSystem/obj/MyFileSystem.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFileSystem/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyFileSystem/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFileSystem/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MyFileSystem/obj/project.nuget.cache" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -148,7 +215,7 @@
       <workItem from="1602929197314" duration="12708000" />
       <workItem from="1603005455607" duration="15204000" />
       <workItem from="1603093631614" duration="2907000" />
-      <workItem from="1603177656311" duration="3327000" />
+      <workItem from="1603177656311" duration="2778000" />
     </task>
     <task id="LOCAL-00001" summary="API Gateway">
       <created>1603180485226</created>
