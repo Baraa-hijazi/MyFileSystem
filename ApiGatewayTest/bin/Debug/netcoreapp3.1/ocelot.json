@@ -1,0 +1,27 @@
+﻿{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/swagger/v1/swagger.json",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3000
+        }],
+      "UpstreamPathTemplate": "/File/v1/swagger.json",
+      "UpstreamHttpMethod": [ "Get", "POST", "Put", "Delete" ]
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/{API}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3000
+        }],
+      "UpstreamPathTemplate": "/File/{API}",
+      "UpstreamHttpMethod": [ "Get", "POST", "Put", "Delete" ]
+    }
+  ]
+}

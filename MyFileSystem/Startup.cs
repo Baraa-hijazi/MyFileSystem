@@ -22,6 +22,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using MyFileSystem.Persistence.Interfaces;
 
 namespace MyFileSystem
 {
@@ -43,7 +44,6 @@ namespace MyFileSystem
             services.AddAutoMapper(typeof(Startup));
             services.AddMvc().AddFluentValidation();
             services.AddScoped<IFileManager, OSFileManager>();
-            
 
             services.AddIdentity<ApplicationUser, IdentityRole>(options =>
             {
@@ -104,7 +104,7 @@ namespace MyFileSystem
                 }});
             });
 
-            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            //services.AddScoped<IUnitOfWork, UnitOfWork>();
             //services.AddTransient<IUserService, UserService>();
 
             services.Scan(scan => scan
@@ -124,12 +124,11 @@ namespace MyFileSystem
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
-           
             app.UseEndpoints(endpoints => { endpoints.MapControllers();});
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "MyFileSystem API");
             });
         }
     }

@@ -13,6 +13,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using MyFileSystem.Persistence.Interfaces;
 
 namespace MyFileSystem.Services.Account
 {

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
+using MyFileSystem.Persistence.Interfaces;
 
 namespace MyFileSystem.Persistence.Repositories
 {
@@ -23,7 +24,7 @@ namespace MyFileSystem.Persistence.Repositories
         {
             if(predicate != null)
             {
-            var query = table.Where(predicate);
+                var query = table.Where(predicate);
                 if(Includes !=null)
                 {
                     foreach (var str in Includes.Split(","))

@@ -2,6 +2,7 @@
 using MyFileSystem.Entities;
 using MyFileSystem.Persistence.Repositories;
 using System.Threading.Tasks;
+using MyFileSystem.Persistence.Interfaces;
 
 namespace MyFileSystem.Persistence.UnitOfWork
 {
