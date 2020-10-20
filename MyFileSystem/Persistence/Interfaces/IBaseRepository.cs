@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace MyFileSystem.Persistence.Repositories
+namespace MyFileSystem.Persistence.Interfaces
 {
     public interface IBaseRepository<T> where T : class
     {
