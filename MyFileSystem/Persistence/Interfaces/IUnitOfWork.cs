@@ -3,7 +3,7 @@ using MyFileSystem.Entities;
 using MyFileSystem.Persistence.Repositories;
 using System.Threading.Tasks;
 
-namespace MyFileSystem.Persistence.UnitOfWork
+namespace MyFileSystem.Persistence.Interfaces
 {
     public interface IUnitOfWork
     {

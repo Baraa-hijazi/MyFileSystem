@@ -48,8 +48,8 @@ namespace MyFileSystem.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "36a3df67-dcd8-48ab-9879-e6a083e9125a",
-                            ConcurrencyStamp = "91bad459-587e-42be-b565-ade05756ad90",
+                            Id = "fd92068c-5d8d-4dbf-b3f4-0cb0e082c2a3",
+                            ConcurrencyStamp = "71df6084-fc9d-4790-8149-03d20cdff99f",
                             Name = "SuperAdmin",
                             NormalizedName = "SUPERADMIN"
                         });
@@ -142,8 +142,8 @@ namespace MyFileSystem.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "c534eebe-2228-4a94-8bb4-1120e91c9525",
-                            RoleId = "36a3df67-dcd8-48ab-9879-e6a083e9125a"
+                            UserId = "911515a3-3ae7-4390-8aae-9fc26f6e40d3",
+                            RoleId = "fd92068c-5d8d-4dbf-b3f4-0cb0e082c2a3"
                         });
                 });
 
@@ -233,15 +233,15 @@ namespace MyFileSystem.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "c534eebe-2228-4a94-8bb4-1120e91c9525",
+                            Id = "911515a3-3ae7-4390-8aae-9fc26f6e40d3",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "86278092-15a0-476f-9d5e-39ca03ce0089",
+                            ConcurrencyStamp = "4a662e90-fb98-4b88-b558-ef2da4038406",
                             Email = "developer@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "DEVELOPER@GMAIL.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAENCsodwIwjWZOHrsXrezIKsDLO73FStmA++l3pvmqEtRWyOzwUvW0yahedcmBMTD7g==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEG/uDlX/f78Kq1pzOIKsG9+k+D9piAvG7VD+5/fjb+LjAQSoa2Nn8xi3dtOh7kxbxg==",
                             PhoneNumber = "+962788000000000",
                             PhoneNumberConfirmed = true,
                             SecurityStamp = "",

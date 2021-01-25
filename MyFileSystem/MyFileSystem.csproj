@@ -13,6 +13,8 @@
     <Content Remove="wwwroot\fs\**" />
     <EmbeddedResource Remove="wwwroot\fs\**" />
     <None Remove="wwwroot\fs\**" />
+    <Content Remove="Ocelot.json" />
+    <Content Remove="Ocelot.dev.json" />
   </ItemGroup>
 
   <ItemGroup>

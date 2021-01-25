@@ -1,17 +1,20 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "C:\\Users\\Lenovo L\\source\\repos\\MyFileSystem\\MyFileSystem\\MyFileSystem.csproj",
+
+    "projectUniqueName": "C:\\MyFileSystem\\MyFileSystem\\MyFileSystem.csproj",
     "projectName": "MyFileSystem",
-    "projectPath": "C:\\Users\\Lenovo L\\source\\repos\\MyFileSystem\\MyFileSystem\\MyFileSystem.csproj",
-    "outputPath": "C:\\Users\\Lenovo L\\source\\repos\\MyFileSystem\\MyFileSystem\\obj\\",
+    "projectPath": "C:\\MyFileSystem\\MyFileSystem\\MyFileSystem.csproj",
+    "outputPath": "C:\\MyFileSystem\\MyFileSystem\\obj\\",
     "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+    ],
     "originalTargetFrameworks": [
       "netcoreapp3.1"
     ],
     "sources": {
-      "C:\\Program Files (x86)\\DevExpress 20.1\\Components\\System\\Components\\Packages": {},
-      "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+
       "https://api.nuget.org/v3/index.json": {}
     },
     "frameworks": {

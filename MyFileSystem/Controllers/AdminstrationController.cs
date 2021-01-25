@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace MyFileSystem.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("Files/[Controller]")]
     [ApiController]
     public class AdminstrationController : ControllerBase
     {

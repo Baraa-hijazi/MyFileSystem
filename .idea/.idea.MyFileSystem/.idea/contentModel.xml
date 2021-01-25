@@ -1,9 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Lenovo L\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Lenovo L\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_MyFileSystem.-623043842.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Lenovo L\source\repos\MyFileSystem" t="IncludeFlat">
+
+    <e p="C:\MyFileSystem" t="IncludeFlat">
+      <e p="ApiGateway" t="IncludeRecursive">
+        <e p="ApiGateway.csproj" t="IncludeRecursive" />
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="ApiGateway.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Ocelot.json" t="Include" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Startup.cs" t="Include" />
+      </e>
       <e p="MyFileSystem" t="IncludeRecursive">
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
@@ -51,6 +69,9 @@
           <e p="20200901122205_InitialModel2.Designer.cs" t="Include" />
           <e p="20200923111817_login.cs" t="Include" />
           <e p="20200923111817_login.Designer.cs" t="Include" />
+
+          <e p="20201014132056_init.cs" t="Include" />
+
           <e p="FileSystemDbContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="MyFileSystem.csproj" t="IncludeRecursive" />
@@ -145,5 +166,8 @@
       <e p="MyFileSystem.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />
     </e>
+
+    <e p="C:\Users\Baraa Hijazi\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+
   </component>
 </project>

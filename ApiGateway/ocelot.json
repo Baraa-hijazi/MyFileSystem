@@ -1,0 +1,31 @@
+﻿{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/Files/{API}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3000
+        }
+      ],
+      "UpstreamPathTemplate": "/Files/{API}",
+      "UpstreamHttpMethod": ["Get","Post","Delete","Put"]
+    },
+    {
+      "DownstreamPathTemplate": "/swagger/v1/swagger.json",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3000
+        }
+      ],
+      "UpstreamPathTemplate": "/FilesSwagger/v1/swagger.json",
+      "UpstreamHttpMethod": ["Get","Post","Delete","Put"]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:9001"
+  }
+}
