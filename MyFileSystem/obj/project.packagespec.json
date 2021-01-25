@@ -1,6 +1,7 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
+
     "projectUniqueName": "C:\\MyFileSystem\\MyFileSystem\\MyFileSystem.csproj",
     "projectName": "MyFileSystem",
     "projectPath": "C:\\MyFileSystem\\MyFileSystem\\MyFileSystem.csproj",
@@ -13,6 +14,7 @@
       "netcoreapp3.1"
     ],
     "sources": {
+
       "https://api.nuget.org/v3/index.json": {}
     },
     "frameworks": {
